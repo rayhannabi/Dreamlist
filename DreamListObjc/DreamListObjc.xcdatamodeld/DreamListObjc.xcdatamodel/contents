@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="DreamImage" representedClassName="DreamImage" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DreamItem" inverseName="image" inverseEntity="DreamItem" syncable="YES"/>
+    </entity>
+    <entity name="DreamItem" representedClassName="DreamItem" syncable="YES" codeGenerationType="class">
+        <attribute name="creationTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DreamImage" inverseName="item" inverseEntity="DreamImage" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DreamImage" positionX="-54" positionY="18" width="128" height="75"/>
+        <element name="DreamItem" positionX="-290" positionY="-75" width="128" height="120"/>
+    </elements>
+</model>
